@@ -37,7 +37,7 @@ function TopRated() {
 
   return (
     <>
-      <div className="rated row mt-3">
+      <div className="rated row">
         <h3>Top rated</h3>
         <div>
           {movies.length > 0 ? (
