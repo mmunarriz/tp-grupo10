@@ -3,14 +3,42 @@
 * {
   margin: 0;
 }
-/*
+
 .App {
-  background-color: #111;
-}*/
+  /*background-color: #111;*/
+    overflow: hidden;
+}
 
 .row {
   margin-left: 20px;
   color: white;
+}
+
+/* Position inherit de componentes bootstrap para que no se superpongan al nav */
+.card{
+  position: inherit !important;
+}
+
+.css-button{
+  color: white;
+  font-weight: bold;
+}
+
+.css-button-3d--green{
+  position: inherit !important;
+  background-color: rgb(29, 234, 142);
+  border: 1px solid rgb(0, 117, 82);
+  padding: 0.3rem 1rem;
+  box-shadow: 2px 2px rgb(156, 255, 210);
+  border-radius: 0.5rem;
+}
+
+.css-button-3d--yellow{
+  background-color: rgb(255, 217, 0);
+  border: 1px solid rgb(255, 187, 0);
+  padding: 0.3rem 1rem;
+  box-shadow: 2px 2px  rgb(255, 178, 11);
+  border-radius: 0.5rem;
 }
 
 body {
@@ -34,17 +62,25 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 0.2em;
   justify-content: center;
+  margin-bottom: 4rem;
 }
 
 h2 {
   background-color: antiquewhite;
 }
 
+.rated{
+  background-color: #111;
+}
+
+/* Paginación prev - next */
+
 .paginacion {
   position: fixed;
   bottom: 0;
-  background: #100a1f;
-  width: 100%;
+  background: #111;
+  width: 102vw !important;
+  max-width: 110% !important;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -52,22 +88,36 @@ h2 {
 }
 
 .paginacion button {
-  cursor: pointer;
   border: none;
+  height: 3rem;
+  width: 3rem;
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  height: 50px;
-  width: 200px;
-  background: #241744;
+  align-items: center;
+  align-content: center;
+  background: #ffffff2c;
   color: #fff;
+  font-size: 2rem;
   border-radius: 100px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
   transition: 0.3s ease all;
+  margin: 0px 1rem;
 }
 
 .paginacion button:hover {
   background: #137c32;
 }
+
+@media (max-width:800px) {
+  .grid {    
+    grid-template-columns: repeat(3, 1fr);
+    
+  }
+
+  .css-button-3d--green {
+    min-width: 70px;
+   
+    font-size: 10px;
+
+ 
+  }
+}  

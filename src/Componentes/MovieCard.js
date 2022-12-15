@@ -59,30 +59,31 @@ const MovieCard = ({
   };
 
   return (
-    <div className="card text-center bg-dark mb-3">
+    <div className="card text-center bg-dark mb-2 tarjeta">
       <div className="card-body">
         <img className="card-img-top" src={API_IMG + poster_path} alt="img" />
-        <div className="card-body">
-          <div className="d-grid d-md-flex justify-content-md-center">
+        <div className="card-body boton-oculto">
+          <div>
             <button
-              className="badge bg-success text-dark"
+              className="css-button css-button-3d css-button-3d--green"
               type="button"
               onClick={handleShowMovie}
             >
-              More Info
+              <i class="fa-solid fa-plus"></i> Info
             </button>
+
           </div>
           <Modal show={showMovie} onHide={handleCloseMovie}>
             <Modal.Header closeButton>
               <Modal.Title>
                 <button
-                  className="badge bg-warning text-dark"
+                  className="css-button css-button-3d css-button-3d--yellow"
                   type="button"
                   onClick={() => {
                     confirmFavorite(id);
                   }}
                 >
-                  Add favorite
+                  <i class="fa-solid fa-star"></i> Add favorites
                 </button>
               </Modal.Title>
             </Modal.Header>
