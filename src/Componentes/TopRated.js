@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
 import MovieCard from "./MovieCard";
-import { useAuth } from "../context/authContext";
+
 
 function TopRated() {
-  const { user } = useAuth();
-  console.log(user.email)
   const [movies, setMovies] = useState([]);
   let [page, setPage] = useState(1);
 
