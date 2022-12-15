@@ -20,23 +20,37 @@ function Banner() {
       className="banner"
       style={{
         backgroundSize: "cover",
+        backgroundPosition: "center",
         backgroundImage: `url('${base_url}${movie?.backdrop_path}')`,
       }}
     >
-      <div className="banner__contents">
-        <h1 className="banner__title">
-          {movie?.name || movie?.title || movie?.orginal_name}
-        </h1>
-        <div className="banner__buttons">
-          <button className="banner__button">Play</button>
-          <button className="banner__button">More Info</button>
+      <div className="banner--fadeBottom">
+
+        <div className="banner__contents">
+
+          <h1 className="banner__title">
+            {movie?.name || movie?.title || movie?.orginal_name}
+          </h1>
+
+          <div>
+            <p className="banner__description">{movie?.overview}</p>
+          </div>
+
+          <div className="botones-descripcion">
+
+            <div className="banner__buttons">
+              <button className="banner__button">Play</button>
+              <button className="banner__button">More Info</button>
+            </div>
+
+          </div>
+
         </div>
-        <br />
-        <p className="banner__description">{movie?.overview}</p>
+
       </div>
-      <div className="banner--fadeBottom" />
     </header>
   );
 }
+
 
 export default Banner;
