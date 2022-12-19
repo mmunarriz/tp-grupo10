@@ -10,6 +10,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../firebaseConfig/firebase";
 import Swal from "sweetalert2";
+import { useNavigate } from 'react-router-dom'
 
 const MostrarFavoritas = () => {
 
@@ -71,6 +72,12 @@ const MostrarFavoritas = () => {
 
   //7 mostrar datos en estructura
 
+  const navigate = useNavigate();
+  const volver = (e) => {
+    navigate('/')
+  };
+
+
   return (
     <div className="container">
       <div className="row">
@@ -106,6 +113,9 @@ const MostrarFavoritas = () => {
             </tbody>
           </table>
         </div>
+        <button id="btnAnterior" onClick={volver}>
+          <i data-id="prev" class="fa-solid fa-chevron-left"></i>
+        </button>
       </div>
     </div>
   );

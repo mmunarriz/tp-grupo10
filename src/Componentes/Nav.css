@@ -1,4 +1,10 @@
 /*Contenedor del NAV*/
+.container {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: black;
+}
+
 .nav {
   position: fixed;
   top: 0;

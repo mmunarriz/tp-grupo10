@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { Login } from "./Componentes/Login";
 import { Register } from "./Componentes/Register";
 import { Logout } from "./Componentes/Logout";
@@ -41,6 +41,7 @@ function App() {
               }
             />
             <Route path="/register" element={<Register />} />
+            <Route path='*' element={<Navigate replace to="/" />} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>

@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 import Banner from "./Banner";
-import Nav from "./Nav";
+import NavBarNet from "./NavBarNet";
 import TopRated from "./TopRated";
 import { useAuth } from "../context/authContext";
 
@@ -10,7 +10,7 @@ function Principal() {
   console.log(user)
   return (
     <div className="App">
-      <Nav />
+      <NavBarNet />
       <Banner />
       <TopRated />
     </div>
